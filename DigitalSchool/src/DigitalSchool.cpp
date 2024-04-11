@@ -1,15 +1,8 @@
-#include <iostream>
+#include <raylib.h>
 
-// Function declaration
-void OpenURL(const char* url);
+using namespace std;
 
-int main() {
-    const char* url = "https://codingburgas.org";
-    OpenURL(url);
-    return 0;
-}
-
-// Function definition
-void OpenURL(const char* url) {
-    // Implementation here
+int main()
+{
+	InitWindow(1920, 1080, "DS");
 }
