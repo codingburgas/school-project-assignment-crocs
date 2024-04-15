@@ -3,3 +3,4 @@
 #include <fstream>
 #include <string>
 #include "login.h"
+#include "register.h"
