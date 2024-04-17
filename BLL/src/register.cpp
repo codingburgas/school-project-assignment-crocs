@@ -24,3 +24,35 @@ bool checkPassword(std::string password)
     else
         return false;
 }
+bool reg(std::fstream& loginFile)
+{
+    std::string registerUsername;
+    std::string registerPassword;
+
+    std::cin >> registerUsername;
+    while (true)
+    {
+        std::cin >> registerPassword;
+        if (checkPassword(registerPassword))
+        {
+            break;
+        }
+    }
+    bool checkFind = false;
+    while (!loginFile.eof())
+    {
+        std::string line;
+        getline(loginFile, line);
+        if (line.find(registerUsername) != std::string::npos)
+        {
+            checkFind = true;
+            break;
+        }
+
+    }
+    if (!checkFind)
+    {
+        loginFile << std::endl << registerUsername + " " + registerPassword;
+    }
+    return !checkFind;
+}
