@@ -1,8 +1,8 @@
-#include <raylib.h>
+#include "../lib/precompile.h"
 
 using namespace std;
 
 int main()
 {
-	InitWindow(1920, 1080, "DS");
+	app();
 }
