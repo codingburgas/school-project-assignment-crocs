@@ -9,7 +9,7 @@
   - [Documentation and Presentation](#docs)
   - [Team](#collaborators)
   - [Technologies](#technologies)
-  - [Installation](#instal)
+  - [Installation](#install)
  
 ## 💡 Our Idea <a name="idea"></a>
 
@@ -43,7 +43,7 @@
 <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/C%2B%2B_logo.png" alt="C++ logo" width="48px">
 </p>
 
-## ⚙️ Installation	<a name = "installation"></a>
+## ⚙️ Installation	<a name = "install"></a>
 ````	
 1. cmd 
 2. git clone https:https://github.com/codingburgas/school-project-assignment-crocs.git
