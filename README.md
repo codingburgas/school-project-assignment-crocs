@@ -2,7 +2,7 @@
 <br>
 <p align="center">
   
-<br>
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
  
 ## 📋 Table of contents
   - [Our Idea](#idea)
@@ -36,7 +36,7 @@
 <p align="left">
   
 </p> 
-<br>
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 💻 Languages
 <p align="left"> 
