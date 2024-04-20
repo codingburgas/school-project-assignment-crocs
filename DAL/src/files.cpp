@@ -10,3 +10,8 @@ std::fstream openFile(std::string& name)
 	}
 	return file;
 }
+
+void closeFile(std::fstream& file)
+{
+	file.close();
+}
