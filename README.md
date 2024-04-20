@@ -46,26 +46,19 @@
 </p>
 
 ## ⚙️ Installation	<a name = "install"></a>
+
+<p>To download our project, clone our repository by pasting this command in your command prompt:</p>
+    
 <b>Step 1</b>
-<p>Install the application</p>
-````	
-git clone https:https://github.com/codingburgas/school-project-assignment-crocs.git
-
-````
-
+Install the application
+<pre>git clone https://github.com/codingburgas/school-project-assignment-crocs.git
+</pre>
 <b>Step 2</b>
-<p>Go to the main folder</p>
-````
-cd school-project-assignment-crocs
-
-````
-
+Go to the main folder
+<pre>cd school-project-assignment-crocs</pre>
 <b>Step 3</b>
-<p>Start the premake</p>
-````	
-start ./vendor/premake/premake5.exe vs2022    // use the version of your Visual Studio
-
-````
+Start the builder (Use the correct version you have downloaded of your Visual Studio)
+<pre>start ./vendor/premake/premake5.exe vs2022</pre>
 
 <h3 align="center"> Thank you and enjoy our app! <h3>
 <h4 align="center"> Made with Lua, C++ & Raylib </h4>
