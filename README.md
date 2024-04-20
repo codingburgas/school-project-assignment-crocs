@@ -12,7 +12,7 @@
   - [Installation](#install)
  
 ## 💡 Our Idea <a name="idea"></a>
-
+Our idea is to create easy-to-use test software.
 #### 
 ## 📄 Documentation and Presentation <a name="docs"></a>
 
@@ -51,14 +51,19 @@
     
 <b>Step 1</b>
 Install the application
-<pre>git clone https://github.com/codingburgas/school-project-assignment-crocs.git
-</pre>
+```
+git clone https://github.com/codingburgas/school-project-assignment-crocs.git
+```
 <b>Step 2</b>
 Go to the main folder
-<pre>cd school-project-assignment-crocs</pre>
+```
+cd school-project-assignment-crocs
+```
 <b>Step 3</b>
 Start the builder (Use the correct version you have downloaded of your Visual Studio)
-<pre>start ./vendor/premake/premake5.exe vs2022</pre>
+```
+start ./vendor/premake/premake5.exe vs2022
+```
 
 <h3 align="center"> Thank you and enjoy our app! <h3>
 <h4 align="center"> Made with Lua, C++ & Raylib </h4>
