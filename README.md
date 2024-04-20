@@ -2,7 +2,7 @@
 <br>
 <p align="center">
   
-![------------------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+![----------------------------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
  
 ## 📋 Table of contents
   - [Our Idea](#idea)
@@ -31,14 +31,14 @@
 > 5. **QA** - **LPApostolov21**	
    - ***GitHub profile***: [***LPApostolov21***](https://github.com/LPApostolov21)
    
-![------------------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+![----------------------------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## ⚒️Tools  <a name="technologies"></a>
 <p align="left">
   
 </p> 
 
-![------------------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+![----------------------------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 💻 Languages
 <p align="left"> 
