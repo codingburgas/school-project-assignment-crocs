@@ -37,3 +37,8 @@ int getFileSize(std::fstream& file)
 	}
 	return fileSize;
 }
+
+void writeInFile(std::fstream& file, std::string line)
+{
+	file << line;
+}
