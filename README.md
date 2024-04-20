@@ -2,7 +2,7 @@
 <br>
 <p align="center">
   
-![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+![------------------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
  
 ## 📋 Table of contents
   - [Our Idea](#idea)
@@ -20,23 +20,25 @@
 ## 🌱 Team <a name="collaborators"></a>
 > 1. **Scrum trainer**	- **VBBoyanov22** 
    - ***GitHub profile***: [***VBBoyanov22***](https://github.com/VBBoyanov22)	
-> 2. **Back-end**- **MDBelchev21**	
+> 2. **Back-end Developer**- **MDBelchev21**	
    - ***GitHub profile***: [***MDBelchev21***](https://github.com/MDBelchev21)	
 > 3. **Back-end Developer** - **AGGeorgiev22** 	
    - ***GitHub profile***: [***AGGeorgiev22***](https://github.com/AGGeorgiev22)
-> 4. **Back-end Developer** - **PAAndonov22**	
+> 4. **Front-end-end Developer** - **PAAndonov22**	
    - ***GitHub profile***: [***PAAndonov22***](https://github.com/PAAndonov22)
-> 5. **Back-end Developer** - **STIvanov21**	
+> 5. **Front-end Developer** - **STIvanov21**	
    - ***GitHub profile***: [***STIvanov21***](https://github.com/STIvanov21)
 > 5. **QA** - **LPApostolov21**	
    - ***GitHub profile***: [***LPApostolov21***](https://github.com/LPApostolov21)
-<br>
+   
+![------------------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## ⚒️Tools  <a name="technologies"></a>
 <p align="left">
   
 </p> 
-![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+![------------------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 💻 Languages
 <p align="left"> 
