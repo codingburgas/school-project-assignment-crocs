@@ -46,12 +46,34 @@
 </p>
 
 ## ⚙️ Installation	<a name = "install"></a>
+<b>Step 1</b>
+<p>Install the application</p>
 ````	
-1. cmd 
-2. git clone https:https://github.com/codingburgas/school-project-assignment-crocs.git
-3. start ./vendor/premake/premake5.exe vs2022
+git clone https:https://github.com/codingburgas/school-project-assignment-crocs.git
+
 ````
- 
+
+<b>Step 2</b>
+<p>Go to the main folder</p>
+````
+cd school-project-assignment-crocs
+
+````
+
+<b>Step 3</b>
+<p>Start the premake</p>
+````	
+start ./vendor/premake/premake5.exe vs2022    // use the version of your Visual Studio
+
+````
+
+<h3 align="center"> Thank you and enjoy our app! <h3>
+<h4 align="center"> Made with Lua, C++ & Raylib </h4>
+
+![----------------------------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+<h6 align="center">This README was designed by Veselin Boyanov.</h6>
+<h4 align="center"> Created by Team Crocs | &copy 2023-2024 All rights reserved.</h4>
  
 ## 👏 Appreciation
 ```
