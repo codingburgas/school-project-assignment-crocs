@@ -7,3 +7,4 @@
 #include "loginPage.h"
 #include "registerPage.h"
 #include "mainMenu.h"
+#include "questions.h"

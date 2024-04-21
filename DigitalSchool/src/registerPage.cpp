@@ -6,12 +6,13 @@ int userCharCount1 = 0;
 char password1[15] = "\0";
 int passCharCount1 = 0;
 
+int continueToTest1 = 0;
 
 void registerPage() {
 	Font customFont = GetFontDefault();
 
 	float borderThickness = 2;
-	Color borderColor = GRAY;
+	Color borderColor = BLACK;
 
 	DrawTextEx(customFont, "Program The Future!", Vector2{ 710, 280 }, 50, 3, BLACK);
 

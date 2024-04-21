@@ -6,6 +6,7 @@ int userCharCount = 0;
 char password[15] = "\0";
 int passCharCount = 0;
 
+int StartTest = 0;
 
 void loginPage() {
 	Font customFont = GetFontDefault();
@@ -94,4 +95,12 @@ void loginPage() {
 
 	}
 	else SetMouseCursor(MOUSE_CURSOR_DEFAULT);
+
+	if (CheckCollisionPointRec(GetMousePosition(), loginButton) && IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
+		StartTest = 1;
+	}
+
+	if (StartTest == 1) {
+		questions();
+	}
 }
