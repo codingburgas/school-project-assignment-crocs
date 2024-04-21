@@ -6,3 +6,4 @@
 #include "app.h"
 #include "loginPage.h"
 #include "registerPage.h"
+#include "mainMenu.h"

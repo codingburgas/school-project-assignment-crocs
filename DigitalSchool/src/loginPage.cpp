@@ -13,7 +13,7 @@ void loginPage() {
 	float borderThickness = 2;
 	Color borderColor = GRAY;
 
-	DrawTextEx(customFont, "Program The Future!", Vector2{710, 280}, 50, 3, BLACK);
+	DrawTextEx(customFont, "Login Before Starting", Vector2{700, 280}, 50, 3, BLACK);
 
 	//Draw username text box
 	Rectangle usernameText = { 820, 415, 280, 45 };
