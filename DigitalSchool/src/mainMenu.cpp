@@ -7,7 +7,8 @@ void mainMenuProcesses() {
     Rectangle registerNowButton = { 620, 610, 280, 70 };
     Rectangle loginNowButton = { 1020, 610, 280, 70 };
 
-    questions();
+    loginPage();
+    //questions();
 
     if (continueToTest == 0) {
         DrawText("Team Crocs", 500, 250, 150, BLACK);

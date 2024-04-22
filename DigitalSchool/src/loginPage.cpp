@@ -1,9 +1,9 @@
 #include "../lib/precompile.h"
 
-char username[15] = "\0";
+char username[17] = "\0";
 int userCharCount = 0;
 
-char password[15] = "\0";
+char password[17] = "\0";
 int passCharCount = 0;
 
 int StartTest = 0;
@@ -31,7 +31,10 @@ void loginPage() {
 	DrawRectangle(820, 515, 280, 45, RAYWHITE);
 	DrawRectangleLinesEx(passwordText, borderThickness, borderColor);
 	if (password[0] != '\0')
-		DrawText(password, 835, 530, 20, BLACK);
+	{
+		for (int i = 0; i < passCharCount; i++)
+			DrawText("*", 835 + i * 11, 530, 20, BLACK);
+	}
 
 	else DrawText("Password", 835, 530, 20, LIGHTGRAY);
 
