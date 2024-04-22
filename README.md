@@ -1,7 +1,7 @@
 <h1 align="center">Crocs</h1>
 <br>
 <p align="center">
-  <img src="">
+  <img src="DigitalSchool/assets/crocs-logo.png">
 </p>
 
 ![----------------------------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
