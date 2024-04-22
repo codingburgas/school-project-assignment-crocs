@@ -1,9 +1,9 @@
 #include "../lib/precompile.h"
 
-char username1[15] = "\0";
+char username1[17] = "\0";
 int userCharCount1 = 0;
 
-char password1[15] = "\0";
+char password1[17] = "\0";
 int passCharCount1 = 0;
 
 int continueToTest1 = 0;
@@ -31,7 +31,10 @@ void registerPage() {
 	DrawRectangle(820, 515, 280, 45, RAYWHITE);
 	DrawRectangleLinesEx(passwordText, borderThickness, borderColor);
 	if (password1[0] != '\0')
-		DrawText(password1, 835, 530, 20, BLACK);
+	{
+		for (int i = 0; i < passCharCount1; i++)
+			DrawText("*", 835 + i * 11, 530, 20, BLACK);
+	}
 
 	else DrawText("Password", 835, 530, 20, LIGHTGRAY);
 
@@ -95,4 +98,7 @@ void registerPage() {
 
 	}
 	else SetMouseCursor(MOUSE_CURSOR_DEFAULT);
+
+	if (GetKeyPressed() == KEY_ESCAPE)
+		return;
 }

@@ -8,7 +8,8 @@ int passCharCount = 0;
 
 int StartTest = 0;
 
-void loginPage() {
+void loginPage()
+{
 	Font customFont = GetFontDefault();
 
 	float borderThickness = 2;
@@ -106,4 +107,7 @@ void loginPage() {
 	if (StartTest == 1) {
 		questions();
 	}
+
+	if (GetKeyPressed() == KEY_ESCAPE)
+		mainMenuProcesses();
 }
