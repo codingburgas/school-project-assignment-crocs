@@ -2,4 +2,4 @@
 
 bool checkPassword(std::string password);
 
-bool reg(std::fstream& loginFile)
+bool reg(std::fstream& loginFile);
