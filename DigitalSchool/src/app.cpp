@@ -7,6 +7,8 @@ public:
 };
 display screen;
 
+activity currentMenu;
+
 void app()
 {
     //Initialize main app screen
@@ -30,7 +32,7 @@ void app()
         //Set background color
         ClearBackground(RAYWHITE);
 
-        mainMenuProcesses();
+        mainMenuProcesses(currentMenu);
 
         EndDrawing();
     }

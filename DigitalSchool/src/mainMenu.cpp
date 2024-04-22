@@ -1,16 +1,12 @@
 #include "../lib/precompile.h"
 
-bool mainMenuActive = true;
-bool loginPageActive = false;
-bool registerPageActive = false;
-
-void mainMenuProcesses() {
+void mainMenuProcesses(activity currentMenu) {
 
     Rectangle registerNowButton = { 620, 610, 280, 70 };
     Rectangle loginNowButton = { 1020, 610, 280, 70 };
 
 
-    if(mainMenuActive)
+    if(currentMenu.mainMenu)
     {
         DrawText("Team Crocs", 500, 250, 150, BLACK);
 
@@ -24,28 +20,19 @@ void mainMenuProcesses() {
         {
             SetMouseCursor(MOUSE_CURSOR_POINTING_HAND);
             if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON))
-            {
-                mainMenuActive = false;
-                loginPageActive = false;
-                registerPageActive = true;
-            }
+                currentMenu.activateRegister();
         }
         else if (CheckCollisionPointRec(GetMousePosition(), loginNowButton))
         {
             SetMouseCursor(MOUSE_CURSOR_POINTING_HAND);
             if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON))
-            {
-                mainMenuActive = false;
-                loginPageActive = true;
-                registerPageActive = false;
-            }
+                currentMenu.activateLogin();
         }
         else SetMouseCursor(MOUSE_CURSOR_DEFAULT);
     }
-    if (loginPageActive)
-        loginPage();
-    if (registerPageActive)
-    {
-        registerPage();
-    }
+    if (currentMenu.loginPage)
+        loginPage(currentMenu);
+
+    if (currentMenu.registerPage)
+        registerPage(currentMenu);
 }

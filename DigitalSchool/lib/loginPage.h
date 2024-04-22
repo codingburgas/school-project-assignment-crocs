@@ -1,3 +1,3 @@
 #pragma once
 
-void loginPage();
+void loginPage(activity currentMenu);

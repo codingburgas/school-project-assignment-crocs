@@ -8,7 +8,7 @@ int passCharCount1 = 0;
 
 int continueToTest1 = 0;
 
-void registerPage() {
+void registerPage(activity currentMenu) {
 	Font customFont = GetFontDefault();
 
 	float borderThickness = 2;
@@ -25,6 +25,10 @@ void registerPage() {
 
 	else DrawText("Username", 835, 430, 20, LIGHTGRAY);
 
+	//Draw back button
+	Rectangle backButton = { 1700, 50, 70, 70 };
+	DrawRectangle(1700, 50, 70, 70, BLUE);
+	DrawText("<-", 1705, 53, 70, LIGHTGRAY);
 
 	//Draw password text box
 	Rectangle passwordText = { 820, 515, 280, 45 };

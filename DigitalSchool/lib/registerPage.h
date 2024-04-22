@@ -1,3 +1,3 @@
 #pragma once
 
-void registerPage();
+void registerPage(activity currentMenu);

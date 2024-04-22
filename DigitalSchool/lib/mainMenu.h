@@ -1,3 +1,3 @@
 #pragma once
 
-void mainMenuProcesses();
+void mainMenuProcesses(activity currentMenu);
