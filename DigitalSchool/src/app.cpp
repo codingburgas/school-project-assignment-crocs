@@ -1,42 +1,53 @@
 #include "../lib/precompile.h"
+#include "../lib/app.h"
 
-class display {
-public:
-    int width = 1920; //GetScreenWidth();
-    int height = 1080; //GetScreenHeight();
-};
-display screen;
-
-activity currentMenu;
-
-void app()
+app::app()
 {
     //Initialize main app screen
     InitWindow(screen.width, screen.height, "app");
     SetTargetFPS(30);
 
-    SetExitKey(KEY_NULL);
+    update();
+}
 
-    char username[15] = "\0";
-    int userCharCount = 0;
-
-    char password[15] = "\0";
-    int passCharCount = 0;
-
-    int StartTest = 0;
-
+void app::update()
+{
     while (!WindowShouldClose())
     {
-        BeginDrawing();
+        display();
+    }
+    CloseWindow();
+}
 
-        //Set background color
-        ClearBackground(RAYWHITE);
+void app::display()
+{
+    BeginDrawing();
 
-        mainMenuProcesses(currentMenu);
+    //Set background color
+    ClearBackground(RAYWHITE);
 
-        EndDrawing();
+    pageHandler();
+
+    EndDrawing();
+}
+
+void app::pageHandler()
+{
+    if (pageBools.mainMenuShouldDisplay)
+    {
+        mainMenu.displayMainMenu();
+        mainMenu.buttonHandler(pageBools);
     }
 
+    //if (pageBools.registerPageShouldDisplay)
+    //{
+    //    
+    //}
 
-    CloseWindow();
+    if (pageBools.loginPageShouldDisplay)
+    {
+        login.displayLoginPage();
+        login.buttonHandler(pageBools);
+        login.textBoxHandler();
+    }
 }

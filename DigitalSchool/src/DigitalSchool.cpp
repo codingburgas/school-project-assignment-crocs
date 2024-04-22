@@ -1,8 +1,7 @@
 #include "../lib/precompile.h"
-
-using namespace std;
+#include "../lib/app.h"
 
 int main()
 {
-	app();
+	app app;
 }

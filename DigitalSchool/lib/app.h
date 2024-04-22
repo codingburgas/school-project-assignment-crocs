@@ -1,31 +1,28 @@
 #pragma once
+#include "precompile.h"
+#include "mainMenu.h"
+#include "loginPage.h"
+#include "pageHandle.h"
 
-void app();
-
-class activity {
+class displayRes {
 public:
-    bool mainMenu = 1;
-    bool loginPage = 0;
-    bool registerPage = 0;
+    int width = 1920; //GetScreenWidth();
+    int height = 1080; //GetScreenHeight();
+};
 
-    void activateMain()
-    {
-        mainMenu = 1;
-        loginPage = 0;
-        registerPage = 0;
-    }
+class app {
+public:
+    app();
+    void display();
+    void update();
+    void pageHandler();
 
-    void activateLogin()
-    {
-        mainMenu = 0;
-        loginPage = 1;
-        registerPage = 0;
-    }
-
-    void activateRegister()
-    {
-        mainMenu = 0;
-        loginPage = 0;
-        registerPage = 1;
-    }
+    char username[15] = "\0";
+    int userCharCount = 0;
+    char password[15] = "\0";
+    int passCharCount = 0;
+    mainMenu mainMenu;
+    login login;
+    displayRes screen;
+    pageBools pageBools;
 };
