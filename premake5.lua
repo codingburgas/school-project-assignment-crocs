@@ -1,14 +1,14 @@
+-- Create the solution file
 workspace "DigitalSchool"
-
+    startproject "DigitalSchool"
     architecture "x86_64"
-
     configurations { "Debug", "Release" }
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 -- Create a static library project for Business Logic Layer (BLL)
 project "BLL"
-    location "BLL/BLL"
+    location "BLL"
     kind "StaticLib"
     language "C++"
     cppdialect "C++20"
@@ -16,10 +16,8 @@ project "BLL"
     targetdir ("bin/".. outputdir.. "/%{prj.name}")
     objdir ("bin-int/".. outputdir.. "/%{prj.name}")
 
-    files { "BLL/src/**.cpp", "BLL/include/**.h" }
-
-    includedirs { "BLL/include" }
-
+    files { "BLL/src/**.cpp", "BLL/lib/**.h" }
+    
     staticruntime "On"
     systemversion "latest"
 
@@ -33,7 +31,7 @@ project "BLL"
 
 -- Create a static library project for Data Access Layer (DAL)
 project "DAL"
-    location "DAL/DAL"
+    location "DAL"
     kind "StaticLib"
     language "C++"
     cppdialect "C++20"
@@ -41,9 +39,7 @@ project "DAL"
     targetdir ("bin/".. outputdir.. "/%{prj.name}")
     objdir ("bin-int/".. outputdir.. "/%{prj.name}")
 
-    files { "DAL/src/**.cpp", "DAL/include/**.h" }
-
-    includedirs { "DAL/include" }
+    files { "DAL/src/**.cpp", "DAL/lib/**.h" }
 
     staticruntime "On"
     systemversion "latest"
@@ -66,15 +62,13 @@ project "DigitalSchool"
     targetdir ("bin/".. outputdir.. "/%{prj.name}")
     objdir ("bin-int/".. outputdir.. "/%{prj.name}")
 
-    files { "DigitalSchool/src/**.cpp", "DigitalSchool/src/**.h" }
+    files { "DigitalSchool/src/**.cpp", "DigitalSchool/lib/**.h" }
 
-    includedirs { "vendor/raylib/include", "DigitalSchool/src", "BLL/include", "DAL/include" }
+    includedirs { "vendor/raylib/include", "DigitalSchool/src", "BLL/lib", "DAL/lib" }
 
     libdirs { "vendor/raylib/lib" }
 
     links { "raylibdll", "BLL", "DAL" }
-
-    postbuildcommands { ("{COPY} vendor/raylib/lib/raylib.dll bin/".. outputdir.. "/%{prj.name}") }
 
     staticruntime "On"
     systemversion "latest"

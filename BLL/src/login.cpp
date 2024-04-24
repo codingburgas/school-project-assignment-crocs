@@ -1,4 +1,4 @@
-#include "../includes/precompile.h"
+#include "../lib/precompile.h"
 
 bool login(std::fstream& loginFile)
 {
