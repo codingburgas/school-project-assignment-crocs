@@ -31,7 +31,7 @@ Our idea is to create easy-to-use test software.
 
 ![----------------------------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-## 📄 Docs <a name="docs"></a>
+## 📄 Documentation <a name="docs"></a>
 
 <img src="https://img.icons8.com/fluency/48/000000/microsoft-word-2019.png" alt="MS Word logo" width=20px />[Documentation](https://github.com/codingburgas/school-project-assignment-crocs/raw/main/DigitalSchool%20documents/DocumentationCrocs.docx)
 
@@ -59,9 +59,10 @@ Our idea is to create easy-to-use test software.
 
 ## ⚒️Tools  <a name="technologies"></a>
 <p align="left">
-  <img src="https://raw.githubusercontent.com/sbivanov22/baklava/main/assets/icons/gitHubIcon.png" alt="GitHub logo" width=48px>
+  <img src="https://cdn.worldvectorlogo.com/logos/github-icon-2.svg" alt="GitHub logo" width=48px>
 <img src="https://img.icons8.com/fluency/48/000000/microsoft-word-2019.png" alt="MS Word logo" width=48px />
 <img src="https://img.icons8.com/fluency/48/000000/microsoft-powerpoint-2019.png" width=48/>
+<img src="https://img.icons8.com/fluency/48/000000/microsoft-excel-2019.png" width=48/>
 <img src="https://admin.kuleuven.be/icts/services/teams/images/Teamslogo/image" alt="Teams logo" width=54px>
 <img src="https://avatars.githubusercontent.com/u/18133?s=200&v=" alt="Git logo" width=48px>
 <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Visual_Studio_2017_Logo.svg" alt="MS VisualStudio logo" width=48px />
