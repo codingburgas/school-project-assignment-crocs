@@ -12,15 +12,24 @@
   - [Team](#collaborators)
   - [Technologies](#technologies)
   - [Installation](#install)
+
+![----------------------------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
  
 ## 💡 Our Idea <a name="idea"></a>
 Our idea is to create easy-to-use test software.
 #### 
-## 📄 Documentation and Presentation <a name="docs"></a>
+
+![----------------------------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+## 📄 Docs <a name="docs"></a>
 
 <img src="https://img.icons8.com/fluency/48/000000/microsoft-word-2019.png" alt="MS Word logo" width=20px />[Documentation](https://github.com/codingburgas/school-project-assignment-crocs/raw/main/DigitalSchool%20documents/DocumentationCrocs.docx)
-<br>
+
 <img src="https://img.icons8.com/fluency/48/000000/microsoft-powerpoint-2019.png" alt="MS PowerPoint logo" width=20px >[Presentation](https://github.com/codingburgas/school-project-assignment-crocs/raw/main/DigitalSchool%20documents/CrocsPresentation.pptx)
+
+<img src="https://img.icons8.com/fluency/48/000000/microsoft-excel-2019.png" alt="MS Excel logo" width=20px >[QA](https://github.com/codingburgas/school-project-assignment-crocs/blob/main/DigitalSchool%20documents/QA_Crocs.xlsx)
+
+![----------------------------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
  
 ## 🌱 Team <a name="collaborators"></a>
 > 1. **Scrum trainer**	- **VBBoyanov22** 
@@ -40,7 +49,14 @@ Our idea is to create easy-to-use test software.
 
 ## ⚒️Tools  <a name="technologies"></a>
 <p align="left">
-  
+  <img src="https://raw.githubusercontent.com/sbivanov22/baklava/main/assets/icons/gitHubIcon.png" alt="GitHub logo" width=48px>
+<img src="https://img.icons8.com/fluency/48/000000/microsoft-word-2019.png" alt="MS Word logo" width=48px />
+<img src="https://img.icons8.com/fluency/48/000000/microsoft-powerpoint-2019.png" width=48/>
+<img src="https://admin.kuleuven.be/icts/services/teams/images/Teamslogo/image" alt="Teams logo" width=54px>
+<img src="https://avatars.githubusercontent.com/u/18133?s=200&v=" alt="Git logo" width=48px>
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Visual_Studio_2017_Logo.svg" alt="MS VisualStudio logo" width=48px />
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Visual_Studio_Code_1.18_icon.svg" alt="MS VisualStudioCode logo" width=48px>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Raylib_logo.png/120px-Raylib_logo.png" alt="MS VisualStudio logo" width=48px />
 </p> 
 
 ![----------------------------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
@@ -51,6 +67,7 @@ Our idea is to create easy-to-use test software.
     <img src=https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Lua-Logo.svg/640px-Lua-Logo.svg.png alt="Lua logo" width="50">
 </p>
 
+![----------------------------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## ⚙️ Installation	<a name = "install"></a>
 
@@ -71,6 +88,11 @@ Start the builder (Use the correct version you have downloaded of your Visual St
 ```
 start ./vendor/premake/premake5.exe vs2022
 ```
+<b>Step 4 (If the raylib.dll file is not found)</b>
+Open the solution file and start the program then close it and go to the cmd and paste the command. (The command copies the raylib.dll file and paste in the folder with the .exe file)
+```
+copy "D:\school-project-assignment-crocs\vendor\raylib\lib\raylib.dll" "D:\school-project-assignment-crocs\bin\Debug-windows-x86_64\DigitalSchool"
+```
 
 <h3 align="center"> Thank you and enjoy our app! <h3>
 <h4 align="center"> Made with Lua, C++ & Raylib </h4>
@@ -79,8 +101,6 @@ start ./vendor/premake/premake5.exe vs2022
 
 <h6 align="center">This README was designed by Veselin Boyanov.</h6>
 <h4 align="center"> Created by Team Crocs | &copy 2023-2024 All rights reserved.</h4>
- 
-## 👏 Appreciation
-```
-Thank you for scrolling this far! Please consider giving the repo a star ⭐.
-```
+<h2>Thank you for scrolling this far! Please consider giving the repo a star ⭐.</h2>
+
+![----------------------------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
