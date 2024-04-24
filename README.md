@@ -5,6 +5,16 @@
 </p>
 
 ![----------------------------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+<p align="center">
+  
+<img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/t/codingburgas/school-project-assignment-crocs?labelColor=black&color=blue">
+<img alt="GitHub language count" src="https://img.shields.io/github/languages/count/codingburgas/school-project-assignment-crocs?labelColor=black&color=blue">
+<img alt="GitHub Issues or Pull Requests" src="https://img.shields.io/github/issues-closed/codingburgas/school-project-assignment-crocs?labelColor=black&color=blue">
+<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/codingburgas/school-project-assignment-crocs?labelColor=black&color=blue">
+<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/codingburgas/school-project-assignment-crocs?labelColor=black&color=blue">
+  
+</p>
  
 ## 📋 Table of contents
   - [Our Idea](#idea)
