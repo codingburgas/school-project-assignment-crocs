@@ -1,4 +1,5 @@
 #include "../lib/precompile.h"
+#include "../lib/register.h"
 
 bool checkPassword(std::string password)
 {
@@ -24,35 +25,43 @@ bool checkPassword(std::string password)
     else
         return false;
 }
-bool reg(std::fstream& loginFile)
+
+bool reg(std::fstream& loginFile, std::string registerUsername, std::string registerPassword, std::string registerEmail)
 {
-    std::string registerUsername;
-    std::string registerPassword;
-
-    std::cin >> registerUsername;
-    while (true)
+    bool checkValidity = false;
+    if (checkPassword(registerPassword) && checkUsername(registerUsername) && checkEmail(registerEmail))
     {
-        std::cin >> registerPassword;
-        if (checkPassword(registerPassword))
+        checkValidity = true;
+    }
+    if (checkValidity)
+    {
+        bool checkFind = false;
+        while (!loginFile.eof())
         {
-            break;
-        }
-    }
-    bool checkFind = false;
-    while (!loginFile.eof())
-    {
-        std::string line;
-        getline(loginFile, line);
-        if (line.find(registerUsername) != std::string::npos)
-        {
-            checkFind = true;
-            break;
-        }
+            std::string line;
+            getline(loginFile, line);
+            if (line.find(registerUsername) != std::string::npos)
+            {
+                checkFind = true;
+                break;
+            }
 
+        }
+        if (!checkFind)
+        {
+            loginFile << std::endl << registerUsername + " " + registerPassword;
+        }
+        return !checkFind;
     }
-    if (!checkFind)
-    {
-        loginFile << std::endl << registerUsername + " " + registerPassword;
-    }
-    return !checkFind;
+    return false;
+}
+
+bool checkUsername(std::string username)
+{
+    return username.find(' ') != std::string::npos;
+}
+
+bool checkEmail(std::string email)
+{
+    return email.find('@') != std::string::npos;
 }

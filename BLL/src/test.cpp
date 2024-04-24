@@ -1,4 +1,5 @@
 #include "../lib/precompile.h"
+#include "../lib/test.h"
 
 QUESTIONS* getRandomQuestions(QUESTIONS* questionBank)
 {
