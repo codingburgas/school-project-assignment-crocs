@@ -2,8 +2,10 @@
 #include "precompile.h"
 #include "mainMenu.h"
 #include "loginPage.h"
+#include "registerPage.h"
+#include "preTestPage.h"
+#include "testPage.h"
 #include "pageHandle.h"
-
 class displayRes {
 public:
     int width = 1920; //GetScreenWidth();
@@ -21,8 +23,12 @@ public:
     int userCharCount = 0;
     char password[15] = "\0";
     int passCharCount = 0;
+    bool windowShouldClose;
     mainMenu mainMenu;
     login login;
+    reg reg;
     displayRes screen;
     pageBools pageBools;
+    testPage testPage;
+    preTestPage preTestPage;
 };

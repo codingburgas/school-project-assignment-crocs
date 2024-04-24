@@ -6,4 +6,6 @@ pageBools::pageBools()
     mainMenuShouldDisplay = true;
     registerPageShouldDisplay = false;
     loginPageShouldDisplay = false;
+    preTestPageShouldDisplay = false;
+    testPageShouldDisplay = false;
 }

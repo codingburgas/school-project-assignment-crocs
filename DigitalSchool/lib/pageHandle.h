@@ -7,4 +7,6 @@ public:
     bool mainMenuShouldDisplay;
     bool registerPageShouldDisplay;
     bool loginPageShouldDisplay;
+    bool preTestPageShouldDisplay;
+    bool testPageShouldDisplay;
 };

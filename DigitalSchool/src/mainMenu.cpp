@@ -22,6 +22,8 @@ void mainMenu::buttonHandler(pageBools& pages)
             pages.mainMenuShouldDisplay = false;
             pages.registerPageShouldDisplay = true;
             pages.loginPageShouldDisplay = false;
+            pages.preTestPageShouldDisplay = false;
+            pages.testPageShouldDisplay = false;
         }
     }
     else
@@ -33,6 +35,8 @@ void mainMenu::buttonHandler(pageBools& pages)
                 pages.mainMenuShouldDisplay = false;
                 pages.registerPageShouldDisplay = false;
                 pages.loginPageShouldDisplay = true;
+                pages.preTestPageShouldDisplay = false;
+                pages.testPageShouldDisplay = false;
             }
         }
         else

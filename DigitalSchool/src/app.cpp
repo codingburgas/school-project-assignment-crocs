@@ -6,13 +6,13 @@ app::app()
     //Initialize main app screen
     InitWindow(screen.width, screen.height, "app");
     SetTargetFPS(30);
-
+    windowShouldClose = false;
     update();
 }
 
 void app::update()
 {
-    while (!WindowShouldClose())
+    while (!WindowShouldClose() || !windowShouldClose)
     {
         display();
     }
@@ -37,17 +37,38 @@ void app::pageHandler()
     {
         mainMenu.displayMainMenu();
         mainMenu.buttonHandler(pageBools);
+        return;
     }
 
-    //if (pageBools.registerPageShouldDisplay)
-    //{
-    //    
-    //}
+    if (pageBools.registerPageShouldDisplay)
+    {
+        reg.displayRegisterPage();
+        reg.buttonHandler(pageBools);
+        reg.textBoxHandler();
+        return;
+    }
 
     if (pageBools.loginPageShouldDisplay)
     {
         login.displayLoginPage();
         login.buttonHandler(pageBools);
         login.textBoxHandler();
+        return;
     }
+
+    if (pageBools.preTestPageShouldDisplay)
+    {
+        preTestPage.displayPreTestPage();
+        preTestPage.buttonHandler(pageBools);
+        return;
+    }
+
+    if (pageBools.testPageShouldDisplay)
+    {
+        testPage.displayTestPage();
+        testPage.drawQuestion();
+        testPage.buttonHandler();
+        return;
+    }
+    windowShouldClose = true;
 }

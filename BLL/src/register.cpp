@@ -1,4 +1,4 @@
-#include "../lib/precompile.h"
+#include "../lib/precompileBLL.h"
 #include "../lib/register.h"
 
 bool checkPassword(std::string password)

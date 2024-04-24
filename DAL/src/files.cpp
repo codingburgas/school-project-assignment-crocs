@@ -1,4 +1,4 @@
-#include "../lib/precompile.h"
+#include "../lib/precompileDAL.h"
 
 std::fstream openFile(std::string& name)
 {

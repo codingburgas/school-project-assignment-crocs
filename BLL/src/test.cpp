@@ -1,4 +1,4 @@
-#include "../lib/precompile.h"
+#include "../lib/precompileBLL.h"
 #include "../lib/test.h"
 
 QUESTIONS* getRandomQuestions(QUESTIONS* questionBank)

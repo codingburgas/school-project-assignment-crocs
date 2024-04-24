@@ -39,7 +39,14 @@ void login::buttonHandler(pageBools& pages)
 	if (CheckCollisionPointRec(GetMousePosition(), loginButton))
 	{
 		SetMouseCursor(MOUSE_CURSOR_POINTING_HAND);
-
+		if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+		{
+			pages.mainMenuShouldDisplay = false;
+			pages.registerPageShouldDisplay = false;
+			pages.loginPageShouldDisplay = false;
+			pages.preTestPageShouldDisplay = true;
+			pages.testPageShouldDisplay = false;
+		}
 	}
 	else
 		if (CheckCollisionPointRec(GetMousePosition(), backButton))
@@ -50,6 +57,8 @@ void login::buttonHandler(pageBools& pages)
 				pages.mainMenuShouldDisplay = true;
 				pages.registerPageShouldDisplay = false;
 				pages.loginPageShouldDisplay = false;
+				pages.preTestPageShouldDisplay = false;
+				pages.testPageShouldDisplay = false;
 			}
 		}
 		else
