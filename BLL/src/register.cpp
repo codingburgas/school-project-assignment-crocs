@@ -26,42 +26,24 @@ bool checkPassword(std::string password)
         return false;
 }
 
-bool reg(std::fstream& loginFile, std::string registerUsername, std::string registerPassword, std::string registerEmail)
+bool checkValidity( std::string registerUsername, std::string registerPassword)
 {
-    bool checkValidity = false;
-    if (checkPassword(registerPassword) && checkUsername(registerUsername) && checkEmail(registerEmail))
+    bool checkValidityB = false;
+    if (checkPassword(registerPassword) && checkUsername(registerUsername))
     {
-        checkValidity = true;
+        checkValidityB = true;
     }
-    if (checkValidity)
-    {
-        bool checkFind = false;
-        while (!loginFile.eof())
-        {
-            std::string line;
-            getline(loginFile, line);
-            if (line.find(registerUsername) != std::string::npos)
-            {
-                checkFind = true;
-                break;
-            }
-
-        }
-        if (!checkFind)
-        {
-            loginFile << std::endl << registerUsername + " " + registerPassword;
-        }
-        return !checkFind;
-    }
-    return false;
+    return checkValidityB;
 }
 
 bool checkUsername(std::string username)
 {
-    return username.find(' ') != std::string::npos;
+    return !(username.find(' ') != std::string::npos);
 }
 
-bool checkEmail(std::string email)
+std::string createFileLine(std::string& loginUsername, std::string& loginPassword)
 {
-    return email.find('@') != std::string::npos;
+    std::string inputLine;
+    inputLine = loginUsername + " " + loginPassword;
+    return inputLine;
 }

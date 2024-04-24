@@ -9,9 +9,9 @@ void reg::displayRegisterPage()
 	//Draw username text box
 	DrawRectangle(820, 415, 280, 45, RAYWHITE);
 	DrawRectangleLinesEx(usernameText, borderThickness, borderColor);
-	if (username1[0] != '\0')
+	if (username.size() > 0)
 	{
-		DrawText(username1, 835, 430, 20, BLACK);
+		DrawText(username.c_str(), 835, 430, 20, BLACK);
 	}
 	else DrawText("Username", 835, 430, 20, LIGHTGRAY);
 
@@ -22,9 +22,9 @@ void reg::displayRegisterPage()
 	//Draw password text box
 	DrawRectangle(820, 515, 280, 45, RAYWHITE);
 	DrawRectangleLinesEx(passwordText, borderThickness, borderColor);
-	if (password1[0] != '\0')
+	if (password.size() > 0)
 	{
-		for (int i = 0; i < passCharCount1; i++)
+		for (int i = 0; i < password.size(); i++)
 			DrawText("*", 835 + i * 11, 530, 20, BLACK);
 	}
 	else DrawText("Password", 835, 530, 20, LIGHTGRAY);
@@ -41,21 +41,23 @@ void reg::buttonHandler(pageBools& pages)
 	//register button
 	if (CheckCollisionPointRec(GetMousePosition(), registerButton))
 	{
-		SetMouseCursor(MOUSE_CURSOR_POINTING_HAND);
 		if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
 		{
-			pages.mainMenuShouldDisplay = false;
-			pages.registerPageShouldDisplay = false;
-			pages.loginPageShouldDisplay = false;
-			pages.preTestPageShouldDisplay = false;
-			pages.testPageShouldDisplay = true;
+			if (registerHandler())
+			{
+				pages.mainMenuShouldDisplay = false;
+				pages.registerPageShouldDisplay = false;
+				pages.loginPageShouldDisplay = false;
+				pages.preTestPageShouldDisplay = true;
+				pages.testPageShouldDisplay = false;
+				pages.submitPageShouldDsiplay = false;
+			}
 		}
 		return;
 	}
 	//back button
 	if (CheckCollisionPointRec(GetMousePosition(), backButton))
 	{
-		SetMouseCursor(MOUSE_CURSOR_POINTING_HAND);
 		if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
 		{
 			pages.mainMenuShouldDisplay = true;
@@ -63,60 +65,65 @@ void reg::buttonHandler(pageBools& pages)
 			pages.loginPageShouldDisplay = false;
 			pages.preTestPageShouldDisplay = false;
 			pages.testPageShouldDisplay = false;
+			pages.submitPageShouldDsiplay = false;
 		}
 		return;
 	}
-	SetMouseCursor(MOUSE_CURSOR_DEFAULT);
 }
 
 void reg::textBoxHandler()
 {
 	if (CheckCollisionPointRec(GetMousePosition(), usernameText))
 	{
-		if (userCharCount1 < 14 || ((GetTime() / 0.5f) < 1))
-		{
-			DrawLine(837 + MeasureText(username1, 20), 430, 837 + MeasureText(username1, 20), 430 + 20, BLACK);
-		}
-
 		SetMouseCursor(MOUSE_CURSOR_IBEAM);
 		int key = GetCharPressed();
-		if ((key >= 32) && (key <= 125) && (userCharCount1 < 14))
+		if ((key >= 32) && (key <= 125) && (username.size() < 14))
 		{
-			username1[userCharCount1] = (char)key;
-			username1[userCharCount1 + 1] = '\0';
-			userCharCount1++;
+			username.push_back((char)key);
 		}
 		if (IsKeyPressed(KEY_BACKSPACE))
 		{
-			userCharCount1--;
-			if (userCharCount1 < 0) userCharCount1 = 0;
-			username1[userCharCount1] = '\0';
+			if (username.size() > 0)
+				username.pop_back();
 		}
 		return;
 	}
 
 	if (CheckCollisionPointRec(GetMousePosition(), passwordText))
 	{
-		if (passCharCount1 < 14 || ((GetTime() / 0.5f) < 1))
-		{
-			DrawLine(837 + MeasureText(password1, 20), 530, 837 + MeasureText(password1, 20), 530 + 20, BLACK);
-		}
-
 		SetMouseCursor(MOUSE_CURSOR_IBEAM);
 		int key = GetCharPressed();
-		if ((key >= 32) && (key <= 125) && (passCharCount1 < 14))
+		if ((key >= 32) && (key <= 125) && (password.size() < 14))
 		{
-			password1[passCharCount1] = (char)key;
-			password1[passCharCount1 + 1] = '\0';
-			passCharCount1++;
+			password.push_back((char)key);
 		}
 		if (IsKeyPressed(KEY_BACKSPACE))
 		{
-			passCharCount1--;
-			if (passCharCount1 < 0) passCharCount1 = 0;
-			password1[passCharCount1] = '\0';
+			if (password.size() > 0)
+				password.pop_back();
 		}
 		return;
 	}
 	SetMouseCursor(MOUSE_CURSOR_DEFAULT);
+}
+
+bool reg::registerHandler()
+{
+	bool check = false;
+	std::fstream loginFile;
+	loginFile.open("../files/login.txt", std::ios::in | std::ios::out);
+	if (!loginFile)
+		std::cout << "login.txt failed to load!";
+	else
+	{
+		std::string fileLine = createFileLine(username, password);
+		check = checkIfInFileLine(loginFile, username);
+		loginFile.close();
+		loginFile.open("../files/login.txt", std::ios::in | std::ios::out | std::ios::app);
+		if (!check)
+			writeInFile(loginFile, fileLine);
+		loginFile.close();
+		return !check;
+	}
+	return check;
 }

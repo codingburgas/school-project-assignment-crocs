@@ -1,15 +1,8 @@
 #pragma once
 #include "../lib/precompile.h"
 #include "pageHandle.h"
-
-struct QUESTIONS {
-	std::string question;
-	std::string answerA;
-	std::string answerB;
-	std::string answerC;
-	std::string answerD;
-	std::string correct;
-};
+#include "test.h"
+#include "files.h"
 
 class questionDisplay {
 	QUESTIONS question;
@@ -20,7 +13,7 @@ class testPage {
 public:
 	void displayTestPage();
 	void drawQuestion();
-	void buttonHandler();
+	void buttonHandler(pageBools& pages);
 
 	int indexOfQuestion = 0;
 	int questionPosY = 210;
@@ -28,7 +21,7 @@ public:
 
 	questionDisplay* question = new questionDisplay[20];
 	Rectangle navbar = { 30, 40, 1860, 120 };
-	Texture2D Logo = LoadTexture("../school-project-assignment-crocs/DigitalSchool/assets/crocs-logo.png");
+	//Texture2D* Logo = new Texture2D(LoadTexture("../assets/crocs-logo.png"));
 	Rectangle questionnaire = { 30, 180, 1460, 800 };
 	Rectangle sidebar = { 1510, 180, 380, 800 };
 	Rectangle questionNumber = { 1540, 210, 320, 150 };

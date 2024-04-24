@@ -2,8 +2,8 @@
 
 bool checkPassword(std::string password);
 
-bool reg(std::fstream& loginFile, std::string registerUsername, std::string registerPassword, std::string registerEmail);
+bool checkValidity(std::string registerUsername, std::string registerPassword);
 
 bool checkUsername(std::string username);
 
-bool checkEmail(std::string email);
+std::string createFileLine(std::string& loginUsername, std::string& loginPassword);

@@ -8,4 +8,5 @@ pageBools::pageBools()
     loginPageShouldDisplay = false;
     preTestPageShouldDisplay = false;
     testPageShouldDisplay = false;
+    submitPageShouldDsiplay = false;
 }

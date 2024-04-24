@@ -1,12 +1,15 @@
 #pragma once
 #include "precompile.h"
 #include "pageHandle.h"
+#include "login.h"
+#include "files.h"
 
 class login {
 public:
 	void displayLoginPage();
 	void textBoxHandler();
 	void buttonHandler(pageBools& pages);
+	bool loginHandler();
 
 	Font customFont = GetFontDefault();
 	Color borderColor = GRAY;
@@ -15,10 +18,7 @@ public:
 	Rectangle passwordText = { 820, 515, 280, 45 };
 	Rectangle loginButton = { 820, 660, 280, 90 };
 	Rectangle Border = { 670, 215, 580, 600 };
-
+	std::string username;
+	std::string password;
 	float borderThickness = 2;
-	char username[17] = "\0";
-	int userCharCount = 0;
-	char password[17] = "\0";
-	int passCharCount = 0;
 };

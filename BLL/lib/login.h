@@ -1,2 +1,2 @@
 #pragma once
-bool login(std::fstream& loginFile);
+std::string createFileLine(std::string& loginUsername, std::string& loginPassword);

@@ -5,6 +5,7 @@
 #include "registerPage.h"
 #include "preTestPage.h"
 #include "testPage.h"
+#include "submitPage.h"
 #include "pageHandle.h"
 class displayRes {
 public:
@@ -23,7 +24,6 @@ public:
     int userCharCount = 0;
     char password[15] = "\0";
     int passCharCount = 0;
-    bool windowShouldClose;
     mainMenu mainMenu;
     login login;
     reg reg;
@@ -31,4 +31,5 @@ public:
     pageBools pageBools;
     testPage testPage;
     preTestPage preTestPage;
+    submitPage submitPage;
 };

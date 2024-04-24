@@ -13,7 +13,7 @@ void submitPage::displaySubmitPage() {
 	DrawText("Digital School Project", 70, 110, 25, BLACK);
 
 	//Draw navbar logo
-	DrawTextureEx(Logo, Vector2(1710, 50), 0, 0.3, RAYWHITE);
+	//DrawTextureEx(*Logo, Vector2(1710, 50), 0, 0.3, RAYWHITE);
  
 	//Draw outline boxes
 	DrawRectangle(30, 200, 1860, 700, RAYWHITE);
@@ -43,6 +43,13 @@ void submitPage::displaySubmitPage() {
 	DrawText("Grading method: Average grade", 800, 330, 20, BLACK);
 }
 
-void submitPage::buttonHandler() {
-
+void submitPage::buttonHandler(pageBools& pages) {
+	if (CheckCollisionPointRec(GetMousePosition(), homeButton) && IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
+		pages.mainMenuShouldDisplay = true;
+		pages.registerPageShouldDisplay = false;
+		pages.loginPageShouldDisplay = false;
+		pages.preTestPageShouldDisplay = false;
+		pages.testPageShouldDisplay = false;
+		pages.submitPageShouldDsiplay = false;
+	}
 }

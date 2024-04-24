@@ -1,15 +1,17 @@
 #pragma once
-
+#include "precompile.h"
+#include "pageHandle.h"
+#include "register.h"
+#include "files.h"
 
 class reg {
 public:
 	void displayRegisterPage();
 	void buttonHandler(pageBools& pages);
 	void textBoxHandler();
-	char username1[17] = "\0";
-	int userCharCount1 = 0;
-	char password1[17] = "\0";
-	int passCharCount1 = 0;
+	bool registerHandler();
+	std::string username;
+	std::string password;
 	float borderThickness = 2;
 	Font customFont = GetFontDefault();
 	Color borderColor = BLACK;

@@ -10,7 +10,7 @@ void testPage::displayTestPage() {
 	DrawText("Digital School Project", 70, 110, 25, BLACK);
 
 	//Draw navbar logo
-	DrawTextureEx(Logo, Vector2(1710, 50), 0, 0.3, RAYWHITE);
+	//DrawTextureEx(*Logo, Vector2(1710, 50), 0, 0.3, RAYWHITE);
 	DrawRectangleLinesEx(questionnaire, 1, BLACK);
 
 	//Draw sidebar
@@ -80,7 +80,7 @@ void testPage::drawQuestion()
 	
 }
 
-void testPage::buttonHandler()
+void testPage::buttonHandler(pageBools& pages)
 {
 	if (CheckCollisionPointRec(GetMousePosition(), nextQuestion) && IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
 		if (indexOfQuestion < 19) {
@@ -94,11 +94,14 @@ void testPage::buttonHandler()
 		}
 	}
 
-	//if (CheckCollisionPointRec(GetMousePosition(), submitButton) && IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
-	//	if (indexOfQuestion < 19) {
-	//		indexOfQuestion--;
-	//	}
-	//}
+	if (CheckCollisionPointRec(GetMousePosition(), submitButton) && IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
+		pages.mainMenuShouldDisplay = false;
+		pages.registerPageShouldDisplay = false;
+		pages.loginPageShouldDisplay = false;
+		pages.preTestPageShouldDisplay = false;
+		pages.testPageShouldDisplay = false;
+		pages.submitPageShouldDsiplay = true;
+	}
 
 	if (CheckCollisionPointRec(GetMousePosition(), answer1) && IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
 		selectedAnswer = 1;

@@ -1,21 +1,5 @@
 #include "../lib/precompileDAL.h"
 
-std::fstream openFile(std::string& name)
-{
-	std::fstream file;
-	file.open("../../files/" + name, std::ios::in | std::ios::out);
-	if (!file)
-	{
-		std::cout << name + ".txt could not open";
-	}
-	return file;
-}
-
-void closeFile(std::fstream& file)
-{
-	file.close();
-}
-
 std::string* getLine(std::fstream& file, int lineNum)
 {
 	std::string* line = new std::string{};
@@ -38,7 +22,35 @@ int getFileSize(std::fstream& file)
 	return fileSize;
 }
 
-void writeInFile(std::fstream& file, std::string line)
+void writeInFile(std::fstream& file, std::string& line)
 {
-	file << line;
+	file << line << std::endl;
+}
+
+bool checkIfInFile(std::fstream& file, std::string& line)
+{
+	std::string fileLine;
+	while (!file.eof())
+	{
+		std::getline(file, fileLine);
+		if (fileLine == line)
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool checkIfInFileLine(std::fstream& file, std::string& username)
+{
+	std::string fileLine;
+	while (!file.eof())
+	{
+		std::getline(file, fileLine);
+		if (fileLine.find(username) != std::string::npos)
+		{
+			return true;
+		}
+	}
+	return false;
 }

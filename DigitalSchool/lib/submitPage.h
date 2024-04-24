@@ -1,10 +1,11 @@
 #pragma once
 #include "../lib/precompile.h"
+#include "../lib/pageHandle.h"
 
 class submitPage {
 public:
     void displaySubmitPage();
-    void buttonHandler();
+    void buttonHandler(pageBools& pages);
 
     Rectangle navbar = { 30, 40, 1860, 120 };
     Rectangle topOutline1{ 30, 40, 1860, 120 };
@@ -16,7 +17,7 @@ public:
     Rectangle middleBox3{ 60, 578, 1800, 80 };
     Rectangle homeButton{ 800, 730, 320, 60 };
 
-    Texture2D Logo = LoadTexture("../assets/crocs-logo.png");
+    //Texture2D* Logo = new Texture2D(LoadTexture("assets/crocs-logo.png"));
 
     float borderThickness = 1;
 };

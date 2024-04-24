@@ -9,4 +9,5 @@ public:
     bool loginPageShouldDisplay;
     bool preTestPageShouldDisplay;
     bool testPageShouldDisplay;
+    bool submitPageShouldDsiplay;
 };

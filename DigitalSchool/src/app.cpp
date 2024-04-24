@@ -6,13 +6,13 @@ app::app()
     //Initialize main app screen
     InitWindow(screen.width, screen.height, "app");
     SetTargetFPS(30);
-    windowShouldClose = false;
+
     update();
 }
 
 void app::update()
 {
-    while (!WindowShouldClose() || !windowShouldClose)
+    while (!WindowShouldClose())
     {
         display();
     }
@@ -67,8 +67,14 @@ void app::pageHandler()
     {
         testPage.displayTestPage();
         testPage.drawQuestion();
-        testPage.buttonHandler();
+        testPage.buttonHandler(pageBools);
         return;
     }
-    windowShouldClose = true;
+
+    if (pageBools.submitPageShouldDsiplay)
+    {
+        submitPage.displaySubmitPage();
+        submitPage.buttonHandler(pageBools);
+        return;
+    }
 }
