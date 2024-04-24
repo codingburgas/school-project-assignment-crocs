@@ -29,9 +29,9 @@ void reg::displayRegisterPage()
 	}
 	else DrawText("Password", 835, 530, 20, LIGHTGRAY);
 
-	//Draw login button
+	//Draw register button
 	DrawRectangle(820, 660, 280, 90, BLUE);
-	DrawText("Login", 905, 685, 40, LIGHTGRAY);
+	DrawText("Register", 875, 685, 40, LIGHTGRAY);
 
 	DrawRectangleLinesEx(Border, 1, borderColor);
 }
@@ -73,7 +73,7 @@ void reg::buttonHandler(pageBools& pages)
 
 void reg::textBoxHandler()
 {
-	if (CheckCollisionPointRec(GetMousePosition(), usernameText))
+	if (CheckCollisionPointRec(GetMousePosition(), usernameTextHitbox))
 	{
 		SetMouseCursor(MOUSE_CURSOR_IBEAM);
 		int key = GetCharPressed();
@@ -89,7 +89,7 @@ void reg::textBoxHandler()
 		return;
 	}
 
-	if (CheckCollisionPointRec(GetMousePosition(), passwordText))
+	if (CheckCollisionPointRec(GetMousePosition(), passwordTextHitbox))
 	{
 		SetMouseCursor(MOUSE_CURSOR_IBEAM);
 		int key = GetCharPressed();

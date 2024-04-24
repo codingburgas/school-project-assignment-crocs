@@ -67,7 +67,7 @@ void login::buttonHandler(pageBools& pages)
 void login::textBoxHandler()
 {
 	//username textbox
-	if (CheckCollisionPointRec(GetMousePosition(), usernameText))
+	if (CheckCollisionPointRec(GetMousePosition(), usernameTextHitbox ))
 	{
 		SetMouseCursor(MOUSE_CURSOR_IBEAM);
 		int key = GetCharPressed();
@@ -80,11 +80,12 @@ void login::textBoxHandler()
 			if(username.size() > 0)
 			username.pop_back();
 		}
+		return;
 
 	}
 
 	//password textbox
-	if (CheckCollisionPointRec(GetMousePosition(), passwordText))
+	if (CheckCollisionPointRec(GetMousePosition(), passwordTextHitbox ))
 	{
 		SetMouseCursor(MOUSE_CURSOR_IBEAM);
 		int key = GetCharPressed();
@@ -97,7 +98,9 @@ void login::textBoxHandler()
 			if(password.size() > 0)
 			password.pop_back();
 		}
+		return;
 	}
+	SetMouseCursor(MOUSE_CURSOR_DEFAULT);
 }
 
 bool login::loginHandler()
