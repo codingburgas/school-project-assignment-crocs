@@ -35,47 +35,47 @@ void testPage::drawQuestion()
 	DrawText(question[indexOfQuestion].question.question.c_str(), 70, questionPosY, 20, BLACK);
 
 	//Draw answer choices
-	DrawRing(Vector2(78, questionPosY + 80), 7, 10, 0, 360, 1, BLACK);
+	DrawRing(Vector2(78, questionPosY + 90), 7, 10, 0, 360, 1, BLACK);
 	if (selectedAnswer[indexOfQuestion] == 1)
 	{
-		DrawCircle(78, questionPosY + 80, 8, BLACK);
+		DrawCircle(78, questionPosY + 90, 8, BLACK);
 	}
 	else
 	{
-		DrawCircle(78, questionPosY + 80, 8, RAYWHITE);
+		DrawCircle(78, questionPosY + 90, 8, RAYWHITE);
 	}
-	DrawText(question[indexOfQuestion].question.answerA.c_str(), 78 + 20, questionPosY + 80, 20, BLACK);
+	DrawText(question[indexOfQuestion].question.answerA.c_str(), 78 + 20, questionPosY + 81, 20, BLACK);
 
-	DrawRing(Vector2(78, questionPosY + 150), 7, 10, 0, 360, 1, BLACK);
+	DrawRing(Vector2(78, questionPosY + 160), 7, 10, 0, 360, 1, BLACK);
 	if (selectedAnswer[indexOfQuestion] == 2)
 	{
-		DrawCircle(78, questionPosY + 150, 8, BLACK);
+		DrawCircle(78, questionPosY + 160, 8, BLACK);
 	}
 	else
 	{
-		DrawCircle(78, questionPosY + 150, 8, RAYWHITE);
+		DrawCircle(78, questionPosY + 160, 8, RAYWHITE);
 	}
-	DrawText(question[indexOfQuestion].question.answerB.c_str(), 78 + 20, questionPosY + 150, 20, BLACK);
-	DrawRing(Vector2(78, questionPosY + 220), 7, 10, 0, 360, 1, BLACK);
+	DrawText(question[indexOfQuestion].question.answerB.c_str(), 78 + 20, questionPosY + 151, 20, BLACK);
+	DrawRing(Vector2(78, questionPosY + 230), 7, 10, 0, 360, 1, BLACK);
 	if (selectedAnswer[indexOfQuestion] == 3)
 	{
-		DrawCircle(78, questionPosY + 220, 8, BLACK);
+		DrawCircle(78, questionPosY + 230, 8, BLACK);
 	}
 	else
 	{
-		DrawCircle(78, questionPosY + 220, 8, RAYWHITE);
+		DrawCircle(78, questionPosY + 230, 8, RAYWHITE);
 	}
-	DrawText(question[indexOfQuestion].question.answerC.c_str(), 78 + 20, questionPosY + 220, 20, BLACK);
-	DrawRing(Vector2(78, questionPosY + 290), 7, 10, 0, 360, 1, BLACK);
+	DrawText(question[indexOfQuestion].question.answerC.c_str(), 78 + 20, questionPosY + 221, 20, BLACK);
+	DrawRing(Vector2(78, questionPosY + 300), 7, 10, 0, 360, 1, BLACK);
 	if (selectedAnswer[indexOfQuestion] == 4)
 	{
-		DrawCircle(78, questionPosY + 290, 8, BLACK);
+		DrawCircle(78, questionPosY + 300, 8, BLACK);
 	}
 	else
 	{
-		DrawCircle(78, questionPosY + 290, 8, RAYWHITE);
+		DrawCircle(78, questionPosY + 300, 8, RAYWHITE);
 	}
-	DrawText(question[indexOfQuestion].question.answerD.c_str(), 78 + 20, questionPosY + 290, 20, BLACK);
+	DrawText(question[indexOfQuestion].question.answerD.c_str(), 78 + 20, questionPosY + 291, 20, BLACK);
 }
 
 void testPage::buttonHandler(pageBools& pages)
