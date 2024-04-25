@@ -5,6 +5,7 @@
 #include "files.h"
 
 class questionDisplay {
+public:
 	QUESTIONS question;
 	std::string* chosenAnswer = nullptr;
 };
@@ -14,12 +15,16 @@ public:
 	void displayTestPage();
 	void drawQuestion();
 	void buttonHandler(pageBools& pages);
+	void questionsHandler();
+	void questionChecker();
 
 	int indexOfQuestion = 0;
 	int questionPosY = 210;
-	int selectedAnswer = 0;
-
-	questionDisplay* question = new questionDisplay[20];
+	int selectedAnswer[20] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+	int marks = 0;
+	int grade = 0;
+	questionDisplay question[20];
+	QUESTIONS* questionBank = new QUESTIONS[50];
 	Rectangle navbar = { 30, 40, 1860, 120 };
 	//Texture2D* Logo = new Texture2D(LoadTexture("../assets/crocs-logo.png"));
 	Rectangle questionnaire = { 30, 180, 1460, 800 };

@@ -34,9 +34,10 @@ void submitPage::displaySubmitPage() {
 	DrawText("State", 350, 547, 20, BLACK);
 	DrawText("Finished", 340, 610, 20, BLACK);
 	DrawText("Marks/20", 1000, 547, 20, BLACK);
-	DrawText("grade", 1017, 610, 20, BLACK);
+	DrawText(std::to_string(marks).c_str(), 1017, 610, 20, BLACK);
 	DrawText("Grade", 1300, 547, 20, BLACK);
-	DrawText("10%", 1310, 610, 20, BLACK);
+	stringGrade = std::to_string(grade) + "%";
+	DrawText(stringGrade.c_str(), 1310, 610, 20, BLACK);
 	DrawText("Review", 1660, 547, 20, BLACK);
 	DrawText("Review unavailable", 1600, 610, 20, BLACK);
 	DrawText("Attempts allowed: Unlimited", 760, 280, 30, BLACK);

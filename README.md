@@ -26,7 +26,9 @@
 ![----------------------------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
  
 ## 💡 Our Idea <a name="idea"></a>
-Our idea is to create easy-to-use test software.
+The core of our vision is a user-friendly test generating software that can help simplify the challenges met by users in different domains. We have realized that the process of conducting vast tests may be overwhelming and time-consuming hence we are committed to creating an interface which is friendly to the user.
+
+Our software product will have multiple functionalities designed specifically for our diverse clients. The entire platform starting from customizable test authoring mechanisms, insightful analytics, as well as reporting tools is meant to increase efficiency and productivity.
 #### 
 
 ![----------------------------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
@@ -83,9 +85,10 @@ Our idea is to create easy-to-use test software.
 ## ⚙️ Installation	<a name = "install"></a>
 
 <p>To download our project, clone our repository by pasting this command in your command prompt:</p>
+<h2>The first step is important!</h2>
     
-<b>Step 1</b>
-Install the application
+<b>Step 1</b> 
+Install the application in D drive
 ```
 git clone https://github.com/codingburgas/school-project-assignment-crocs.git
 ```
@@ -100,7 +103,7 @@ Start the builder (Use the correct version you have downloaded of your Visual St
 start ./vendor/premake/premake5.exe vs2022
 ```
 <b>Step 4 (If the raylib.dll file is not found)</b>
-Open the solution file and start the program then close it and go to the cmd and paste the command. (The command copies the raylib.dll file and paste in the folder with the .exe file)
+Open the solution file and start the program then close it and go to the cmd, paste the command and start it again. (The command copies the raylib.dll file and paste in the folder with the .exe file)
 ```
 copy "D:\school-project-assignment-crocs\vendor\raylib\lib\raylib.dll" "D:\school-project-assignment-crocs\bin\Debug-windows-x86_64\DigitalSchool"
 ```

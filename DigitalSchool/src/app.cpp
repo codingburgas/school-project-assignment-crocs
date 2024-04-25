@@ -6,6 +6,7 @@ app::app()
     //Initialize main app screen
     InitWindow(screen.width, screen.height, "app");
     SetTargetFPS(30);
+    testPage.questionsHandler();
 
     update();
 }
@@ -73,6 +74,8 @@ void app::pageHandler()
 
     if (pageBools.submitPageShouldDsiplay)
     {
+        submitPage.marks = testPage.marks;
+        submitPage.grade = testPage.grade;
         submitPage.displaySubmitPage();
         submitPage.buttonHandler(pageBools);
         return;

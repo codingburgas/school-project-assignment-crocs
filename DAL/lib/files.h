@@ -1,6 +1,6 @@
 #pragma once
 
-std::string* getLine(std::fstream& file, int lineNum);
+std::string getLine(std::fstream& file);
 
 int getFileSize(std::fstream& file);
 
